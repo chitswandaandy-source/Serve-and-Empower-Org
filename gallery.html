@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | Serve and Empower</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#071120;
+    color:white;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:rgba(0,0,0,0.9);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    border-bottom:2px solid cyan;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+.logo h2{
+    color:cyan;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:cyan;
+}
+
+/* HEADER */
+
+.page-header{
+    height:50vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+    url('gallerybg.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.page-header h1{
+    font-size:60px;
+    color:cyan;
+}
+
+/* GALLERY SECTION */
+
+.gallery{
+    padding:100px 8%;
+}
+
+.gallery h2{
+    text-align:center;
+    color:cyan;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.gallery p{
+    text-align:center;
+    line-height:1.8;
+    margin-bottom:60px;
+}
+
+/* IMAGE GRID */
+
+.gallery-container{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+/* IMAGE CARD */
+
+.image-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.image-card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+/* HOVER EFFECT */
+
+.image-card:hover img{
+    transform:scale(1.1);
+}
+
+/* OVERLAY */
+
+.overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,0.7);
+    padding:20px;
+}
+
+.overlay h3{
+    color:cyan;
+    margin-bottom:10px;
+}
+
+.overlay p{
+    text-align:left;
+    margin:0;
+    font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    padding:40px;
+    text-align:center;
+    border-top:2px solid cyan;
+    margin-top:50px;
+}
+
+footer img{
+    width:80px;
+    margin-bottom:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:15px;
+}
+
+.page-header h1{
+    font-size:40px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">
+
+<img src="images\IMG-20260608-WA0006.jpg">
+
+<h2>Serve and Empower</h2>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="order.html">Order</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HEADER -->
+
+<section class="page-header">
+
+<h1>Gallery</h1>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+<h2>Our Memories</h2>
+
+<p>
+
+Explore moments from our outreach programs,
+charity events,
+community support activities,
+and volunteer experiences.
+
+</p>
+
+<div class="gallery-container">
+
+<!-- IMAGE 1 -->
+
+<div class="image-card">
+
+<img src="images\IMG-20260608-WA0011.jpg">
+
+<div class="overlay">
+
+<h3>Community Outreach</h3>
+
+<p>
+Supporting communities through outreach initiatives.
+</p>
+
+</div>
+
+</div>
+
+<!-- IMAGE 2 -->
+
+<div class="image-card">
+
+<img src="images\IMG-20260608-WA0008.jpg">
+
+<div class="overlay">
+
+<h3>Volunteer Programs</h3>
+
+<p>
+Volunteers working together to create impact.
+</p>
+
+</div>
+
+</div>
+
+<!-- IMAGE 3 -->
+
+<div class="image-card">
+
+<img src="images\IMG-20260608-WA0004.jpg">
+
+<div class="overlay">
+
+<h3>Charity Event</h3>
+
+<p>
+Sharing hope and support with communities.
+</p>
+
+</div>
+
+</div>
+
+<!-- IMAGE 4 -->
+
+<div class="image-card">
+
+<img src="images\IMG-20260608-WA0013.jpg">
+
+<div class="overlay">
+
+<h3>Youth Empowerment</h3>
+
+<p>
+Empowering young people through leadership initiatives.
+</p>
+
+</div>
+
+</div>
+
+<!-- IMAGE 5 -->
+
+<div class="image-card">
+
+<img src="images\IMG-20260608-WA0014.jpg">
+
+<div class="overlay">
+
+<h3>Mental Health Awareness</h3>
+
+<p>
+Real Talk discussions promoting mental wellness.
+</p>
+
+</div>
+
+</div>
+
+<!-- IMAGE 6 -->
+
+<div class="image-card">
+
+<img src="images\IMG-20260608-WA0015.jpg">
+
+<div class="overlay">
+
+<h3>Serve and Empower Team</h3>
+
+<p>
+Moments shared by volunteers and community leaders.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<img src="images\IMG-20260608-WA0006.jpg">
+
+<h3>Serve and Empower</h3>
+
+<p>UNITE • ACT • IMPACT</p>
+
+<br>
+
+<p>serveandempowerorg@gmail.com</p>
+
+<p>Harare, Zimbabwe</p>
+
+</footer>
+
+</body>
+</html>

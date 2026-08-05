@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Serve and Empower</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#071120;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    background:rgba(0,0,0,0.9);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    border-bottom:2px solid cyan;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+.logo h2{
+    color:cyan;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:cyan;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+    url('background.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:20px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:75px;
+    color:cyan;
+}
+
+.hero h3{
+    color:#c266ff;
+    margin:20px 0;
+    font-size:30px;
+}
+
+.hero p{
+    line-height:1.8;
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+.btn{
+    background:linear-gradient(to right, cyan, purple);
+    color:white;
+    text-decoration:none;
+    padding:15px 40px;
+    border-radius:40px;
+    font-size:18px;
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* INFO SECTION */
+
+.info{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.info h2{
+    color:cyan;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.info p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    padding:40px;
+    text-align:center;
+    border-top:2px solid cyan;
+}
+
+footer img{
+    width:80px;
+    margin-bottom:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:15px;
+}
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero h3{
+    font-size:22px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">
+
+<img src="images\IMG-20260608-WA0006.jpg">
+
+<h2>Serve and Empower</h2>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="order.html">Order</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Serve and Empower</h1>
+
+<h3>UNITE • ACT • IMPACT</h3>
+
+<p>
+
+Empowering communities, supporting youth,
+promoting mental health awareness,
+and creating positive social impact through outreach programs,
+charity events, and empowerment initiatives.
+
+</p>
+
+<a href="volunteer.html" class="btn">Join Us</a>
+
+</div>
+
+</section>
+
+<!-- INFO -->
+
+<section class="info">
+
+<h2>Who We Are</h2>
+
+<p>
+
+Serve and Empower is a nonprofit organization focused on creating
+positive social impact through community outreach,
+youth empowerment,
+mental health awareness,
+charity events,
+and leadership development.
+
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<img src="images\IMG-20260608-WA0006.jpg">
+
+<h3>Serve and Empower</h3>
+
+<p>UNITE • ACT • IMPACT</p>
+
+<br>
+
+<p>
+serveandempowerorg@gmail.com
+</p>
+
+<p>
++263 777 265 018
+</p>
+
+</footer>
+
+</body>
+</html>

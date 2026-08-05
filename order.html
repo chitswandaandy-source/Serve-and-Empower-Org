@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order Products | Serve and Empower</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#071120;
+    color:white;
+}
+
+/* NAV */
+
+nav{
+    background:rgba(0,0,0,0.9);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    border-bottom:2px solid cyan;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+.logo h2{
+    color:cyan;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:cyan;
+}
+
+/* HEADER */
+
+.header{
+    height:45vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+    url('images/orderbg.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.header h1{
+    color:cyan;
+    font-size:55px;
+}
+
+/* SECTION */
+
+.section{
+    padding:100px 8%;
+}
+
+.section h2{
+    text-align:center;
+    color:cyan;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+/* FORM */
+
+form{
+    max-width:600px;
+    margin:auto;
+    background:#11192f;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,255,255,0.2);
+}
+
+input, select, textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+}
+
+textarea{
+    height:120px;
+    resize:none;
+}
+
+/* BUTTON */
+
+.btn{
+    width:100%;
+    padding:12px;
+    background:linear-gradient(to right, cyan, purple);
+    border:none;
+    color:white;
+    font-size:16px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    transform:scale(1.03);
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    padding:40px;
+    text-align:center;
+    border-top:2px solid cyan;
+    margin-top:50px;
+}
+
+footer img{
+    width:80px;
+    margin-bottom:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:15px;
+}
+
+.header h1{
+    font-size:35px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+
+<nav>
+
+<div class="logo">
+<img src="images\IMG-20260608-WA0006.jpg">
+<h2>Serve and Empower</h2>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="order.html">Order</a></li>
+</ul>
+
+</nav>
+
+<!-- HEADER -->
+
+<section class="header">
+<h1>Place Your Order</h1>
+</section>
+
+<!-- FORM SECTION -->
+
+<section class="section">
+
+<h2>Order Form</h2>
+
+<form onsubmit="sendToWhatsApp(); return false;">
+
+<input type="text" id="name" placeholder="Full Name" required>
+
+<input type="text" id="phone" placeholder="Phone Number" required>
+
+<select id="product" required>
+<option value="">Select Product</option>
+<option value="Caps">Caps ($3)</option>
+<option value="Detergents">Detergents ($2)</option>
+</select>
+
+<input type="number" id="quantity" placeholder="Quantity" required>
+
+<textarea id="address" placeholder="Delivery Address / Notes"></textarea>
+
+<button type="submit" class="btn">Submit Order</button>
+
+</form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<img src="images\IMG-20260608-WA0006.jpg">
+
+<h3>Serve and Empower</h3>
+<p>UNITE • ACT • IMPACT</p>
+
+<br>
+
+<p>serveandempowerorg@gmail.com</p>
+<p>Harare, Zimbabwe</p>
+
+</footer>
+
+<!-- WHATSAPP SCRIPT -->
+
+<script>
+
+function sendToWhatsApp(){
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let product = document.getElementById("product").value;
+    let quantity = document.getElementById("quantity").value;
+    let address = document.getElementById("address").value;
+
+    let message =
+`Hello Serve and Empower, I would like to place an order:
+
+Name: ${name}
+Phone: ${phone}
+Product: ${product}
+Quantity: ${quantity}
+Address: ${address}`;
+
+    let url = "https://wa.me/263777265018?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+
+}
+
+</script>
+
+</body>
+</html>

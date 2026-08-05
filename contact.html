@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Serve and Empower</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#071120;
+    color:white;
+}
+
+/* NAV */
+
+nav{
+    background:rgba(0,0,0,0.9);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    border-bottom:2px solid cyan;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+.logo h2{
+    color:cyan;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:cyan;
+}
+
+/* HEADER */
+
+.header{
+    height:45vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+    url('images/contactbg.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.header h1{
+    color:cyan;
+    font-size:55px;
+}
+
+/* SECTION */
+
+.section{
+    padding:100px 8%;
+}
+
+/* GRID */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+}
+
+/* FORM */
+
+form{
+    background:#11192f;
+    padding:30px;
+    border-radius:20px;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+}
+
+textarea{
+    height:120px;
+    resize:none;
+}
+
+/* BUTTON */
+
+.btn{
+    width:100%;
+    padding:12px;
+    background:linear-gradient(to right, cyan, purple);
+    border:none;
+    color:white;
+    font-size:16px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    transform:scale(1.03);
+}
+
+/* INFO BOX */
+
+.info{
+    background:#11192f;
+    padding:30px;
+    border-radius:20px;
+}
+
+.info h3{
+    color:cyan;
+    margin-bottom:15px;
+}
+
+.info p{
+    margin-bottom:10px;
+    line-height:1.6;
+}
+
+/* SOCIAL LINKS */
+
+.social a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin-bottom:10px;
+}
+
+.social a:hover{
+    color:cyan;
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    padding:40px;
+    text-align:center;
+    border-top:2px solid cyan;
+    margin-top:50px;
+}
+
+footer img{
+    width:80px;
+    margin-bottom:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:15px;
+}
+
+.header h1{
+    font-size:35px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+
+<nav>
+
+<div class="logo">
+<img src="images\IMG-20260608-WA0006.jpg">
+<h2>Serve and Empower</h2>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="order.html">Order</a></li>
+</ul>
+
+</nav>
+
+<!-- HEADER -->
+
+<section class="header">
+<h1>Contact Us</h1>
+</section>
+
+<!-- SECTION -->
+
+<section class="section">
+
+<div class="contact-grid">
+
+<!-- FORM -->
+
+<form onsubmit="sendMessage(); return false;">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="text" id="phone" placeholder="Phone Number" required>
+
+<textarea id="message" placeholder="Your Message" required></textarea>
+
+<button type="submit" class="btn">Send Message</button>
+
+</form>
+
+<!-- INFO -->
+
+<div class="info">
+
+<h3>Contact Details</h3>
+
+<p><b>Email:</b> 
+<a href="mailto:serveandempowerorg@gmail.com" style="color:cyan; text-decoration:none;">
+serveandempowerorg@gmail.com
+</a>
+</p>
+<p><b>Location:</b> Harare, Zimbabwe</p>
+<p><b>Phone:</b> +263 777 265 018</p>
+
+<br>
+
+<h3>Social Media</h3>
+
+<div class="social">
+
+<!-- WhatsApp -->
+<a href="https://wa.me/263777265018" target="_blank">
+📱 WhatsApp Chat
+</a>
+
+<!-- Instagram (replace with your real link if needed) -->
+<a href="https://www.instagram.com/serve_and_empower_org?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+📸 Instagram
+</a>
+
+<!-- Facebook -->
+<a href="https://facebook.com/ChristineChitswanda" target="_blank">
+📘 Facebook - Christine Chitswanda
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<img src="images\IMG-20260608-WA0006.jpg">
+
+<h3>Serve and Empower</h3>
+<p>UNITE • ACT • IMPACT</p>
+
+<br>
+
+<p>serveandempowerorg@gmail.com</p>
+<p>Harare, Zimbabwe</p>
+
+</footer>
+
+<!-- WHATSAPP SCRIPT -->
+
+<script>
+
+function sendMessage(){
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let message = document.getElementById("message").value;
+
+    let text =
+`Hello Serve and Empower,
+
+Name: ${name}
+Phone: ${phone}
+Message: ${message}`;
+
+    let url = "https://wa.me/263777265018?text=" + encodeURIComponent(text);
+
+    window.open(url, "_blank");
+
+}
+
+</script>
+
+</body>
+</html>
